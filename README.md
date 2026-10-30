@@ -57,4 +57,5 @@ Untuk Admin
 5. Halaman kontak berisi link untuk menuju sosial media toko (IG, GB, TIK TOK)
 6. Selesai
 
+## COMMIT DESIGN
 
