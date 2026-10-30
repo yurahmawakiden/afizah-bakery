@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="VV4hNw1GNKDhH5wO2s-6" name="Page-1">
-        <mxGraphModel dx="423" dy="300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="3787" dy="1013" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -125,6 +125,9 @@
                 </mxCell>
                 <mxCell id="gZbsi4kMeqeco--OFETY-91" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Menampilkan Sosial Media (FB, IG, TIK TOK)" vertex="1">
                     <mxGeometry height="60" width="135" x="785" y="510" as="geometry"/>
+                </mxCell>
+                <mxCell id="S3y1OCrYwkkZM-feUMV0-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;FLOWCHART WEBSITE afizah-bakery&lt;/font&gt;" vertex="1">
+                    <mxGeometry height="40" width="340" x="80" y="70" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
