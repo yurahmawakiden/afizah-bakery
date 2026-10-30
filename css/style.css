@@ -1,0 +1,128 @@
+:root {
+    --warna-utama: #e5de00; /*Warna untuk header*/
+    --warna-kedua: #e47200; /*Warna untuk footer*/
+    --warna-aksen: #ece75f; /*Warna untuk card*/
+/* secara umum dapat ditulis juga dengan */
+    --primary-color: #e6b400;
+    --secondary-color: #ece75f;
+    --accent-color: #f7f5bc;
+
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    /* text-align: center; */
+    padding: 30px;
+    /* border-top-left-radius: 50%;
+    border-top-right-radius: 50%; */
+}
+
+main {
+    background-color: var(--warna-aksen);
+    color: #333;
+    text-align: center;
+    padding: 40px;
+    border-left: 8px solid;
+    border-right: 8px solid;
+}
+
+footer {
+    background-color: var(--warna-kedua);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 15 px solid;
+}
+
+/* HEADER */
+.site-header {
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    /* Materi 3: Tata letak dengan Flexbox */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Elemen Brand */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    /* Footer selalu di bawah (sticky footer) */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /*tinggi minimal sama dengan tinggi layar*/
+}
+
+/* Elemen Logo */
+.logo {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-position: cover;
+    display: block;
+    
+}
+
+/* MENU */
+
+.main-menu ul {
+    list-style: none;
+    /* Menu berderet ke samping, ganti aturan .main-menu ul */
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.main-menu a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.main-menu a:hover {
+    text-decoration: underline;
+}
+
+/* CONTENT */
+.site-content{
+    padding: 2rem;
+    /* footer selalu di bawah (sticky footer */
+    flex: 1;
+    padding: 2rem;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.site-content section {
+    margin-bottom: 2rem;
+}
+
+/* Materi 4: Tata letak dengan GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fbf7eb;
+    border: 1px solid var(--warna-aksen);
+    border-radius: 8px;
+    padding: 1rem;
+}
