@@ -9,6 +9,12 @@
 
 }
 
+* {
+    box-shadow: border-box;
+    margin: 0;
+    padding: o;
+}
+
 header {
     background-color: var(--primary-color);
     color: white;
@@ -19,16 +25,16 @@ header {
 }
 
 main {
-    background-color: var(--warna-aksen);
+    background-color: white;
     color: #333;
     text-align: center;
     padding: 40px;
-    border-left: 8px solid;
-    border-right: 8px solid;
+    border-left: 8px solid var(--secondary-color);
+    border-right: 8px solid var(--secondary-color);
 }
 
 footer {
-    background-color: var(--warna-kedua);
+    background-color: #4b2e1e;
     color: white;
     text-align: center;
     padding: 15px;
@@ -38,8 +44,8 @@ footer {
 /* HEADER */
 .site-header {
     padding: 1rem 2rem;
-    background-color: var(--primary-color);
-    color: var(--accent-color);
+    background-color: yellow;
+    color: brown;
     /* Materi 3: Tata letak dengan Flexbox */
     display: flex;
     justify-content: space-between;
@@ -57,7 +63,7 @@ footer {
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: var(--secondary-color);
+    color: white;
     /* Footer selalu di bawah (sticky footer) */
     display: flex;
     flex-direction: column;
@@ -86,7 +92,7 @@ body {
 }
 
 .main-menu a{
-    color: #ffffff;
+    color: brown;
     text-decoration: none;
 }
 
@@ -125,4 +131,258 @@ body {
     border: 1px solid var(--warna-aksen);
     border-radius: 8px;
     padding: 1rem;
+}
+
+.product-photo { 
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    background-color: #ddd;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.meta {
+    color: #777777;
+    font-size: 0.9rem;
+}
+
+.price {
+    font-weight: bold;
+    color: #4b2e1e;
+    margin-top: 0.5rem;
+}
+
+/* FOOTER */
+.site-footer {
+    padding: 1rem;
+    /* background-color: var(--warna-aksen); */
+    color: #cccccc;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+/* ===== Responsif ===== */ 
+img { 
+    max-width: 100%; 
+} 
+@media (max-width: 600px) { 
+    .site-header 
+    { flex-direction: column; gap: 1rem; 
+} 
+.main-menu ul { 
+    gap: 1rem; 
+} 
+.site-content { 
+    padding: 1rem;
+}
+}
+
+/* ====== Spesifitas Style Form Kontak ======*/
+/* Aturan khusus untuk label di dalam form */
+#form-kontak label {
+    display: grid;
+    gap: 0.25rem;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: initial;
+}
+
+/* Aturan khusus untuk input di dalam form */
+#form-kontak input,
+#form-kontak textarea {
+    padding: 0.5rem;
+    font: inherit;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    margin: 0;
+}
+
+/* Pastikan button di form juga tidak terpengaruh oleh style dari halaman lain */
+#form-kontak button {
+    /* Gaya default button Anda */
+    display: inline-block;
+    margin: 5px 0;
+    padding: 0.7rem 1.1rem;
+    background: var(--warna-utama);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    /* Mengembalikan properti yang mungkin diubah oleh Bootstrap */
+}
+
+#form-kontak button:hover {
+    background: var(--warna-kedua);
+}
+
+/* Reset properti umum yang sering ditimpa oleh Bootstrap */
+#form-kontak * {
+    all: revert;
+}
+
+#form-kontak {
+    display: grid;
+    gap: 0.75rem;
+    max-width: 420px;
+    margin-top: 1rem;
+}
+
+/* Tombol Bersebelahan & Responsif (Kontak Kami) */
+#form-kontak .tombol-kontak-group {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#form-kontak .tombol-kontak-group button {
+    flex: 1 1 160px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#form-kontak .tombol-kontak-group button:active {
+    transform: scale(0.97);
+}
+
+/* Tombol WhatsApp (Hijau) */
+#form-kontak .tombol-kontak-group .btn-wa {
+    background-color: #008d34;
+    color: #ffffff;
+}
+
+#form-kontak .tombol-kontak-group .btn-wa:hover {
+    background-color: #1eb857;
+}
+
+/* Tombol Email (Biru) */
+#form-kontak .tombol-kontak-group .btn-email {
+    background-color: #0d6efd;
+    color: #ffffff;
+}
+
+#form-kontak .tombol-kontak-group .btn-email:hover {
+    background-color: #0b5ed7;
+}
+
+/* Style untuk link Medsos */
+
+.medsos a {
+    text-decoration: none;
+    color: #ddd;
+}
+.medsos a:hover {
+    color: #fff200;
+}
+
+section#beranda,
+section#beranda h2,
+section#beranda p {
+  text-align: left;
+}
+
+section#produk {
+  text-align: center;
+}
+
+section#produk .grid {
+  display: grid;
+  justify-content: center; /* Menengahkan seluruh grid container */
+  justify-items: center;   /* Menengahkan item di dalam setiap cell grid */
+}
+
+.grid {
+  display: grid;
+  /* Menggunakan auto-fit agar kolom menyesuaikan jumlah item yang ada */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px; /* Opsional: tambahkan jarak antar kartu */
+  justify-content: center;
+  max-width: 1200px; /* Sesuaikan dengan lebar maksimal desain Anda */
+  margin: 0 auto;    /* Menengahkan container grid itu sendiri */
+}
+
+.grid {
+  display: grid;
+  /* Menggunakan auto-fit agar kolom menyesuaikan jumlah item yang ada */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px; /* Opsional: tambahkan jarak antar kartu */
+  justify-content: center;
+  max-width: 1200px; /* Sesuaikan dengan lebar maksimal desain Anda */
+  margin: 0 auto;    /* Menengahkan container grid itu sendiri */
+}
+
+.hubungi {
+    text-align: left;
+}
+
+main.site-content {
+  border-left: none !important;
+  border-right: none !important;
+}
+
+
+/* ===== Filter, tombol, dan formulir ===== */
+.filters {
+display: flex;
+gap: 0.5rem;
+margin: 0.75rem 0;
+}
+.filter {
+padding: 0.3rem 0.9rem;
+border: 1px solid var(--warna-header);
+background: #ffffff;
+border-radius: 999px;
+cursor: pointer;
+text-transform: capitalize;
+}
+.filter.active {
+background: var(--warna-header);
+
+color: #ffffff;
+}
+.btn {
+display: inline-block;
+padding: 0.5rem 1.1rem;
+background: var(--warna-header);
+color: #ffffff;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+}
+form {
+display: grid;
+gap: 0.75rem;
+max-width: 420px;
+margin-top: 1rem;
+}
+label {
+display: grid;
+gap: 0.25rem;
+font-weight: bold;
+}
+input,
+textarea {
+padding: 0.5rem;
+font: inherit;
+border: 1px solid #bbbbbb;
+border-radius: 4px;
+}
+#form-status {
+min-height: 1.5em;
+color: var(--warna-header);
+}
+
+.hubungi {
+    text-align: left;
 }
